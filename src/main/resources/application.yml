@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: spring-boot-aws-s3-test
+
+aws:
+  region: sa-east-1
+  s3:
+    bucket: my-local-bucket
+  localstack:
+    endpoint: http://localhost:4566
