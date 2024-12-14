@@ -1,10 +1,27 @@
 spring:
   application:
     name: spring-boot-aws-s3-test
+# AWS Secret Manager - optinal for DEV
+# spring.config.import=aws-secretsmanager:test/secret/
+# https://spring.io/projects/spring-cloud-aws
+# https://docs.spring.io/spring-cloud-config/reference/server/environment-repository/aws-secrets-manager.html
+  config:
+    import: optional:aws-secretsmanager:test-secret-name
 
+secrets:
+  username: ${DATABASE_USERNAME:test2}
+  password: ${DATABASE_PASSWORD:test2}
+
+# Config AWS
 aws:
   region: sa-east-1
   s3:
     bucket: my-local-bucket
-  localstack:
+# Config AWS Secret manager
+  secretsmanager:
+    enabled: true
     endpoint: http://localhost:4566
+#  paramstore:
+#    enabled: true
+#    endpoint: http://localhost:4566
+

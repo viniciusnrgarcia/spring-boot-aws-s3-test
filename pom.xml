@@ -65,7 +65,26 @@
             <version>2.6.0</version>
         </dependency>
 
+        <!-- AWS Secret manager -->
+        <!-- https://osv.dev/vulnerability/GHSA-264p-99wq-f4j6 -->
+<!--        <dependency>-->
+<!--            <groupId>io.awspring.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-aws-secrets-manager-config</artifactId>-->
+<!--            <version>2.4.4</version>-->
+<!--        </dependency>-->
+
+        <!-- https://docs.awspring.io/spring-cloud-aws/docs/3.0.0/reference/html/index.html#spring-cloud-aws-secrets-manager -->
+<!--        io.awspring.cloud:spring-cloud-aws-secrets-manager-->
+        <!-- pring-cloud-aws-starter-secrets-manager -->
+        <dependency>
+            <groupId>io.awspring.cloud</groupId>
+            <artifactId>spring-cloud-aws-secrets-manager</artifactId>
+            <version>3.1.1</version>
+        </dependency>
+
     </dependencies>
+
+
 
     <build>
         <plugins>
